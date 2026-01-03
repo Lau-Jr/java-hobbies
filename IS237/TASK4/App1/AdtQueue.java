@@ -43,15 +43,18 @@ public class AdtQueue{
 	
 	public void displayAll(){
 		
+		System.out.printf("%n%n==========GPA SCORES============%n");	
 		Node curr = lastNode.getNext();//exception if lastNode == null
 		
-		
-		do{
+		while(true){
+			
 			System.out.println(curr.getGPAScore());
+			if(curr == lastNode){
+				break;
+			}
 			curr = curr.getNext();
 			
-		}while(curr != lastNode);
-		
+		}
 		
 		
 	}
