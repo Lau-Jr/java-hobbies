@@ -3,8 +3,8 @@ public class Node{
 	private Employee emp;
 	private Node next;// by default this is null (field initializer)
 	
-	public Node(String name, int year, double salary){
-		this.emp = new Employee(name,year,salary);
+	public Node(Employee emp){
+		this.emp = emp;
 		next = null; // redundant code.
 	}
 	

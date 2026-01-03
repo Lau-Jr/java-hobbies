@@ -10,6 +10,7 @@ public class MainQueueApp{
 		byte scoreCounts = input.nextByte();
 		
 		AdtQueue scores = new AdtQueue();
+		Employee emp;
 		
 
 		for(int i = 1; i<=scoreCounts; i++){
@@ -25,13 +26,14 @@ public class MainQueueApp{
 			System.out.printf("%nWhich Year were they born: ");
 			int year = input.nextInt();
 			
-			scores.enqueue(name,year,salary);
+			emp = new Employee(name,year,salary);
+			scores.enqueue(emp);
 			
 		}
 		
 		scores.displayAll();
 		
-		System.out.printf("%nDo you want to delete Employee from Queue??: ");
+		System.out.printf("%n%nDo you want to delete Employee from Queue??: ");
 		String studentDeletionResponse = input.next().toLowerCase();
 		
 		if(studentDeletionResponse.equals("yes")){

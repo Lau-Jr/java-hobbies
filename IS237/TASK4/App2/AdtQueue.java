@@ -10,8 +10,8 @@ public class AdtQueue{
 		return lastNode ==  null;
 	}
 	
-	public void enqueue(String name, int year, double salary){
-		Node emp = new Node(name, year, salary);
+	public void enqueue(Employee employee){
+		Node emp = new Node(employee);
 		
 		if(!isEmpty()){
 			emp.setNext(lastNode.getNext());
@@ -47,7 +47,8 @@ public class AdtQueue{
 		
 		while(true){
 			
-			System.out.printf("%nEmployee Name: %s, Salary:%.2f",curr.getEmployee().getName(),curr.getEmployee().getSalary());
+			//System.out.printf("%nEmployee Name: %s, Salary:%.2f",curr.getEmployee().getName(),curr.getEmployee().getSalary());
+			System.out.printf("%n%s",curr.getEmployee());
 			if(curr == lastNode){
 				break;
 			}
