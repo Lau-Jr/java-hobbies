@@ -1,4 +1,12 @@
-package PACKAGE_NAME;
+import java.util.Scanner;
 
-public class Utility {
+public final class Utility {
+
+    public static String nextLine(Scanner input){
+        if(input.hasNext()){
+            input.nextLine();
+            return input.nextLine();
+        }
+        return input.nextLine();
+    }
 }
